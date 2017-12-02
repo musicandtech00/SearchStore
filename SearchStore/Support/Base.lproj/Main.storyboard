@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="SearchStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" prompt="Search" translatesAutoresizingMaskIntoConstraints="NO" id="Sbd-0d-lwa">
+                                <rect key="frame" x="0.0" y="20" width="320" height="75"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="32V-8n-NvL"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UzI-hD-cTd">
+                                <rect key="frame" x="0.0" y="139" width="320" height="429"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="3oZ-IP-DhU"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="qfF-9K-r93"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f86-Jj-c2t">
+                                <rect key="frame" x="0.0" y="76" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="W0h-h3-cem">
+                                        <nil key="title"/>
+                                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="ib3-Bt-Qbi">
+                                            <rect key="frame" x="8" y="7" width="304" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="All"/>
+                                                <segment title="Music"/>
+                                                <segment title="Software"/>
+                                                <segment title="E-Books"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="segmentedChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="YY8-0a-PL7"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Sbd-0d-lwa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2E3-2c-RLw"/>
+                            <constraint firstItem="UzI-hD-cTd" firstAttribute="top" secondItem="Sbd-0d-lwa" secondAttribute="bottom" constant="44" id="D68-MI-J42"/>
+                            <constraint firstItem="UzI-hD-cTd" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="HtH-UX-as7"/>
+                            <constraint firstItem="Sbd-0d-lwa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Nty-XY-iFM"/>
+                            <constraint firstItem="Sbd-0d-lwa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b1U-KT-w6R"/>
+                            <constraint firstItem="UzI-hD-cTd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gNF-P5-GQg"/>
+                            <constraint firstItem="UzI-hD-cTd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nvz-Ph-lvk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="Sbd-0d-lwa" id="FnA-eo-xAt"/>
+                        <outlet property="segmentedControl" destination="ib3-Bt-Qbi" id="Lf3-cG-dKx"/>
+                        <outlet property="tableView" destination="UzI-hD-cTd" id="CqC-lm-05R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.875" y="32.74647887323944"/>
+        </scene>
+    </scenes>
+</document>

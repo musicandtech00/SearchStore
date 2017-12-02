@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		A74B7F051F9BEDD10077597E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74B7F041F9BEDD10077597E /* AppDelegate.swift */; };
-		A74B7F071F9BEDD10077597E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74B7F061F9BEDD10077597E /* ViewController.swift */; };
+		A74B7F071F9BEDD10077597E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74B7F061F9BEDD10077597E /* SearchViewController.swift */; };
 		A74B7F0A1F9BEDD10077597E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A74B7F081F9BEDD10077597E /* Main.storyboard */; };
 		A74B7F0C1F9BEDD10077597E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A74B7F0B1F9BEDD10077597E /* Assets.xcassets */; };
 		A74B7F0F1F9BEDD10077597E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A74B7F0D1F9BEDD10077597E /* LaunchScreen.storyboard */; };
+		A74B7F1B1F9C06CD0077597E /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74B7F1A1F9C06CD0077597E /* SearchResult.swift */; };
+		A74B7F1D1F9D10450077597E /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A74B7F1C1F9D10450077597E /* SearchResultCell.xib */; };
+		A74B7F1F1F9D14A80077597E /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74B7F1E1F9D14A80077597E /* SearchResultCell.swift */; };
+		A74B7F211F9D19A40077597E /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A74B7F201F9D19A40077597E /* NothingFoundCell.xib */; };
+		A74B7F231FA0708D0077597E /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A74B7F221FA0708D0077597E /* LoadingCell.xib */; };
+		A7A4D6331FA807F4009FAC56 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A4D6321FA807F4009FAC56 /* UIImageView+DownloadImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A74B7F011F9BEDD10077597E /* SearchStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A74B7F041F9BEDD10077597E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A74B7F061F9BEDD10077597E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A74B7F061F9BEDD10077597E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A74B7F091F9BEDD10077597E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A74B7F0B1F9BEDD10077597E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A74B7F0E1F9BEDD10077597E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A74B7F101F9BEDD10077597E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A74B7F1A1F9C06CD0077597E /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		A74B7F1C1F9D10450077597E /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		A74B7F1E1F9D14A80077597E /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		A74B7F201F9D19A40077597E /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
+		A74B7F221FA0708D0077597E /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		A7A4D6321FA807F4009FAC56 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,52 @@
 		A74B7F031F9BEDD10077597E /* SearchStore */ = {
 			isa = PBXGroup;
 			children = (
-				A74B7F041F9BEDD10077597E /* AppDelegate.swift */,
-				A74B7F061F9BEDD10077597E /* ViewController.swift */,
-				A74B7F081F9BEDD10077597E /* Main.storyboard */,
-				A74B7F0B1F9BEDD10077597E /* Assets.xcassets */,
-				A74B7F0D1F9BEDD10077597E /* LaunchScreen.storyboard */,
+				A74B7F181F9BEDF70077597E /* View */,
+				A74B7F171F9BEDEE0077597E /* Controller */,
+				A74B7F161F9BEDDF0077597E /* Model */,
+				A74B7F191F9BEE0A0077597E /* Support */,
 				A74B7F101F9BEDD10077597E /* Info.plist */,
 			);
 			path = SearchStore;
+			sourceTree = "<group>";
+		};
+		A74B7F161F9BEDDF0077597E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A74B7F1A1F9C06CD0077597E /* SearchResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A74B7F171F9BEDEE0077597E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A74B7F061F9BEDD10077597E /* SearchViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A74B7F181F9BEDF70077597E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A74B7F1C1F9D10450077597E /* SearchResultCell.xib */,
+				A74B7F1E1F9D14A80077597E /* SearchResultCell.swift */,
+				A74B7F201F9D19A40077597E /* NothingFoundCell.xib */,
+				A74B7F221FA0708D0077597E /* LoadingCell.xib */,
+				A7A4D6321FA807F4009FAC56 /* UIImageView+DownloadImage.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A74B7F191F9BEE0A0077597E /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				A74B7F041F9BEDD10077597E /* AppDelegate.swift */,
+				A74B7F081F9BEDD10077597E /* Main.storyboard */,
+				A74B7F0B1F9BEDD10077597E /* Assets.xcassets */,
+				A74B7F0D1F9BEDD10077597E /* LaunchScreen.storyboard */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +174,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A74B7F0F1F9BEDD10077597E /* LaunchScreen.storyboard in Resources */,
+				A74B7F1D1F9D10450077597E /* SearchResultCell.xib in Resources */,
+				A74B7F231FA0708D0077597E /* LoadingCell.xib in Resources */,
 				A74B7F0C1F9BEDD10077597E /* Assets.xcassets in Resources */,
+				A74B7F211F9D19A40077597E /* NothingFoundCell.xib in Resources */,
 				A74B7F0A1F9BEDD10077597E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,8 +189,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A74B7F071F9BEDD10077597E /* ViewController.swift in Sources */,
+				A74B7F071F9BEDD10077597E /* SearchViewController.swift in Sources */,
+				A74B7F1B1F9C06CD0077597E /* SearchResult.swift in Sources */,
+				A74B7F1F1F9D14A80077597E /* SearchResultCell.swift in Sources */,
 				A74B7F051F9BEDD10077597E /* AppDelegate.swift in Sources */,
+				A7A4D6331FA807F4009FAC56 /* UIImageView+DownloadImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,9 +331,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2MB2J2749Q;
 				INFOPLIST_FILE = SearchStore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = random.SearchStore;
+				PRODUCT_BUNDLE_IDENTIFIER = com.curtiswiseman.SearchStore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -289,9 +346,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2MB2J2749Q;
 				INFOPLIST_FILE = SearchStore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = random.SearchStore;
+				PRODUCT_BUNDLE_IDENTIFIER = com.curtiswiseman.SearchStore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
